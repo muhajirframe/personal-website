@@ -24,11 +24,6 @@ export default () => (
         padding: '0 1rem',
         color: '#555'
       }}>github</a>
-      <a href="https://linkedin.com/muhammad-muhajir" style={{
-        display: 'inline-block',
-        padding: '0 1rem',
-        color: '#555'
-      }}>linkedIn</a>
     </div>
   </div>
 )
