@@ -1,34 +1,66 @@
-import React from "react"
-import Link from "gatsby-link"
-import Helmet from "react-helmet"
+import React, { Component } from 'react'
+import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
+import gl from 'glamorous'
+import anime from 'animejs'
 
-export default () => (
-  <div style={{
-    fontFamily: 'monospace',
-    minHeight: '100vh',
-    textAlign: 'center',
-    paddingTop: '13rem'
-  }}>
-    <h1 style={{
-      'font-family': 'monospace'
-    }}>Muhammad Muhajir</h1>
-    <div>Front End Developer</div>
-    <div>
-      <a href="https://twitter.com/_muhajir_" style={{
-        display: 'inline-block',
-        padding: '0 1rem',
-        color: '#555'
-      }}>twitter</a>
-      <a href="https://github.com/muhajirframe" style={{
-        display: 'inline-block',
-        padding: '0 1rem',
-        color: '#555'
-      }}>github</a>
-      <a href="https://linkedin.com/muhammad-muhajir" style={{
-        display: 'inline-block',
-        padding: '0 1rem',
-        color: '#555'
-      }}>linkedIn</a>
-    </div>
-  </div>
-)
+export default class Index extends Component {
+  componentDidMount = () => {
+    const tl = anime.timeline({
+      autoplay: true
+    })
+    tl
+      .add({
+        targets: '#wrapper',
+        delay: 1000,
+        duration: 2000,
+        opacity: 1
+      })
+      .add({
+        targets: '#heading',
+        color: '#fff',
+        translateY: [-100, 0]
+      })
+      .add({
+        targets: '#tagline',
+        translateX: [-50, 0],
+        color: ['#000', '#fff']
+      })
+      .add({
+        targets: '#email',
+        opacity: 1,
+        duration: 5000
+      })
+  }
+  render() {
+    return (
+      <Wrapper id="wrapper">
+        <Heading id="heading">Muhamamd Muhajir</Heading>
+        <div id="tagline">Front End Developer</div>
+        <div>
+          <Email id="email" href="mailto:hi@muhajirframe.com">
+            hi@muhajirframe.com
+          </Email>
+        </div>
+      </Wrapper>
+    )
+  }
+}
+
+const Wrapper = gl.div({
+  fontFamily: 'monospace',
+  minHeight: '100vh',
+  textAlign: 'center',
+  paddingTop: '13rem',
+  backgroundColor: '#000',
+  opacity: 0
+})
+
+const Heading = gl.h1({
+  'font-family': 'monospace'
+})
+const Email = gl.a({
+  display: 'inline-block',
+  color: '#555',
+  opacity: 0
+})

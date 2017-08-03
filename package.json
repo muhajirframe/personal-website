@@ -1,12 +1,15 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "muhajir-gatsby",
+  "description": "Muhammad Muhajir Website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Muhammad Muhajir <muhajirframe@gmail.com>",
   "dependencies": {
+    "animejs": "^2.0.2",
     "gatsby": "^1.0.1",
     "gatsby-link": "^1.0.1",
-    "gatsby-plugin-react-helmet": "^1.0.1"
+    "gatsby-plugin-react-helmet": "^1.0.1",
+    "glamor": "^2.20.38",
+    "glamorous": "^4.0.0"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0"
