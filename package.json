@@ -5,8 +5,9 @@
   "author": "Muhammad Muhajir <muhajirframe@gmail.com>",
   "dependencies": {
     "animejs": "^2.0.2",
-    "gatsby": "^1.0.1",
+    "gatsby": "^1.6.5",
     "gatsby-link": "^1.0.1",
+    "gatsby-plugin-glamor": "^1.6.0",
     "gatsby-plugin-glamorous": "^1.0.1",
     "gatsby-plugin-react-helmet": "^1.0.1",
     "glamor": "^2.20.38",
