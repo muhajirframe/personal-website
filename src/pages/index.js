@@ -35,7 +35,7 @@ export default class Index extends Component {
   render() {
     return (
       <Wrapper id="wrapper">
-        <Heading id="heading">Muhamamd Muhajir</Heading>
+        <Heading id="heading">Muhammad Muhajir</Heading>
         <div id="tagline">Front End Developer</div>
         <div>
           <Email id="email" href="mailto:hi@muhajirframe.com">
